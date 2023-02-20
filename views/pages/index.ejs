@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Cariilmu</h1>
+        <p>Tabel Admin</p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">no</th>
+                <th scope="col">name</th>
+                <th scope="col">email</th>
+                <th scope="col">password</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% mascots.forEach(function(mascot) { %>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><%= mascot.nameAdmin %></td>
+                        <td><%= mascot.emailAdmin %></td>
+                        <td><%= mascot.passwordAdmin %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+          </table>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
